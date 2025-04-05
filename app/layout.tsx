@@ -1,16 +1,8 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
-
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
+import { Providers } from '~/utils/providers';
+import { Header } from '~/components/layout';
+import { satoshi, clashGrotesk } from '~/fonts';
 
 export const metadata: Metadata = {
   title: 'Bytearoo',
@@ -23,11 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en">
+      <body className={`antialiased ${satoshi.variable} ${clashGrotesk.variable}`}>
+        <Providers>
+          <Header />
+          {children}
+        </Providers>
       </body>
     </html>
   );

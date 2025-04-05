@@ -1,12 +1,14 @@
 import React from 'react';
+import { Hero, Info, WeAreBest } from '~/components/feature';
 
 const Home: React.FC = () => {
   return (
-    <div className='flex flex-col items-center justify-center h-screen'>
-      <h1>Bytearoo</h1>
-    </div>
+    <>
+      <Hero />
+      <Info />
+      <WeAreBest />
+    </>
   );
 };
 
 export default Home;
-
