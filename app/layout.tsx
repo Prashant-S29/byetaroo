@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { Providers } from '~/utils/providers';
-import { Header } from '~/components/layout';
+import { Footer, Header } from '~/components/layout';
 import { satoshi, clashGrotesk } from '~/fonts';
 
 export const metadata: Metadata = {
@@ -20,6 +20,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>

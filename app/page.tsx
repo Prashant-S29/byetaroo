@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hero, Info, WeAreBest } from '~/components/feature';
+import { Expertise, Hero, Info, Solutions, Team, WeAreBest, WeAreBytearoo } from '~/components/feature';
 
 const Home: React.FC = () => {
   return (
@@ -7,6 +7,12 @@ const Home: React.FC = () => {
       <Hero />
       <Info />
       <WeAreBest />
+      <Expertise />
+      <WeAreBytearoo />
+      <Team />
+      <Solutions />
+
+      {/* <div className="h-screen w-full bg-black" /> */}
     </>
   );
 };
