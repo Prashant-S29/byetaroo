@@ -39,42 +39,55 @@ export const Expertise: React.FC = () => {
   };
 
   return (
-    <div
-      className="group relative flex flex-col"
-      onMouseMove={handleMouseMove}
-      onMouseEnter={() => {
-        handleMouseEnter();
-        // handleMouseMove(e);
-      }}
-      onMouseLeave={handleMouseLeave}
-    >
-      <motion.div
-        style={{
-          left: smoothMouse.x,
-          top: smoothMouse.y,
-          scale: showCursor ? 1 : 0,
+    <>
+      <div
+        className="group relative hidden flex-col lg:flex"
+        onMouseMove={handleMouseMove}
+        onMouseEnter={() => {
+          handleMouseEnter();
+          // handleMouseMove(e);
         }}
-        transition={{
-          bounceStiffness: 100,
-          bounceDamping: 10,
-        }}
-        className="pointer-events-none fixed z-10 flex h-[300px] flex-col overflow-hidden rounded-xl transition-transform duration-300"
+        onMouseLeave={handleMouseLeave}
       >
-        <div
-          className={`h-[300px] w-full duration-300`}
-          style={{ transform: `translateY(-${activeExpertiseCard * 300}px)` }}
+        <motion.div
+          style={{
+            left: smoothMouse.x,
+            top: smoothMouse.y,
+            scale: showCursor ? 1 : 0,
+          }}
+          transition={{
+            bounceStiffness: 100,
+            bounceDamping: 10,
+          }}
+          className="pointer-events-none fixed z-10 flex h-[300px] flex-col overflow-hidden rounded-xl transition-transform duration-300"
         >
-          {ExpertiseData.map((data, index) => (
-            <div key={index} className="bg-brand-secondary h-[300px] w-[300px] p-[30px]">
-              <div className="h-full w-full rounded-lg bg-[#dad4ca]" />
-            </div>
-          ))}
-        </div>
-      </motion.div>
+          <div
+            className={`h-[300px] w-full duration-300`}
+            style={{ transform: `translateY(-${activeExpertiseCard * 300}px)` }}
+          >
+            {ExpertiseData.map((data, index) => (
+              <div key={index} className="bg-brand-secondary h-[300px] w-[300px] p-[30px]">
+                <div className="h-full w-full rounded-lg bg-[#dad4ca]" />
+              </div>
+            ))}
+          </div>
+        </motion.div>
 
-      {ExpertiseData.map((expertise, index) => (
-        <ExpertiseCard key={index} index={index} title={expertise.title} description={expertise.description} />
-      ))}
-    </div>
+        {ExpertiseData.map((expertise, index) => (
+          <ExpertiseCard key={index} index={index} title={expertise.title} description={expertise.description} />
+        ))}
+      </div>
+
+      <div className="flex flex-col items-center gap-5 p-5 sm:gap-[30px] sm:p-[30px] lg:hidden lg:gap-[50px] lg:p-[50px]">
+        {ExpertiseData.map((data, index) => (
+          <div
+            key={index}
+            className="bg-brand-secondary aspect-square w-[300px] rounded-xl p-[30px] max-[450px]:w-full"
+          >
+            <div className="h-full w-full rounded-lg bg-[#dad4ca]" />
+          </div>
+        ))}
+      </div>
+    </>
   );
 };

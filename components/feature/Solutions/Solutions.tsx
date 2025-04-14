@@ -7,10 +7,10 @@ import Link from 'next/link';
 
 export const Solutions: React.FC = () => {
   return (
-    <div className="flex flex-col gap-[30px] p-[50px] pt-[200px]">
+    <div className="flex flex-col gap-[30px] p-5 pt-[150px]! sm:p-[30px] lg:p-[50px]">
       <div className="flex flex-col gap-[30px]">
         <section className="relative flex w-full justify-center">
-          <div className="relative size-[50px] rounded-lg">
+          <div className="relative size-[46px] rounded-md md:size-[50px] md:rounded-lg">
             <div className="bg-brand-primary absolute z-10 h-full w-full rounded-lg" />
 
             <motion.div
@@ -24,7 +24,7 @@ export const Solutions: React.FC = () => {
                 left: '-65px',
                 transform: 'rotate(-25deg)',
               }}
-              className="bg-brand-secondary absolute size-[50px] rounded-lg"
+              className="bg-brand-secondary absolute size-[46px] rounded-md md:size-[50px] md:rounded-lg"
             />
             <motion.div
               initial={{
@@ -37,7 +37,7 @@ export const Solutions: React.FC = () => {
                 left: '-2px',
                 transform: 'rotate(0deg)',
               }}
-              className="bg-brand-secondary absolute size-[50px] rounded-lg"
+              className="bg-brand-secondary absolute size-[46px] rounded-md md:size-[50px] md:rounded-lg"
             />
             <motion.div
               initial={{
@@ -50,7 +50,7 @@ export const Solutions: React.FC = () => {
                 left: '63px',
                 transform: 'rotate(25deg)',
               }}
-              className="bg-brand-secondary absolute size-[50px] rounded-lg"
+              className="bg-brand-secondary absolute size-[46px] rounded-md md:size-[50px] md:rounded-lg"
             />
 
             <motion.div
@@ -64,7 +64,7 @@ export const Solutions: React.FC = () => {
                 left: '-85px',
                 transform: 'rotate(-50deg)',
               }}
-              className="bg-brand-secondary absolute size-[50px] rounded-lg"
+              className="bg-brand-secondary absolute size-[46px] rounded-md md:size-[50px] md:rounded-lg"
             />
 
             <motion.div
@@ -78,7 +78,7 @@ export const Solutions: React.FC = () => {
                 left: '-35px',
                 transform: 'rotate(-20deg)',
               }}
-              className="bg-brand-secondary absolute size-[50px] rounded-lg"
+              className="bg-brand-secondary absolute size-[46px] rounded-md md:size-[50px] md:rounded-lg"
             />
             <motion.div
               initial={{
@@ -91,7 +91,7 @@ export const Solutions: React.FC = () => {
                 left: '30px',
                 transform: 'rotate(20deg)',
               }}
-              className="bg-brand-secondary absolute size-[50px] rounded-lg"
+              className="bg-brand-secondary absolute size-[46px] rounded-md md:size-[50px] md:rounded-lg"
             />
             <motion.div
               initial={{
@@ -104,12 +104,12 @@ export const Solutions: React.FC = () => {
                 left: '85px',
                 transform: 'rotate(50deg)',
               }}
-              className="bg-brand-secondary absolute size-[50px] rounded-lg"
+              className="bg-brand-secondary absolute size-[46px] rounded-md md:size-[50px] md:rounded-lg"
             />
           </div>
         </section>
         <section className="flex flex-col items-center gap-5">
-          <h1 className="font-clash-grotesk max-w-[500px] text-center text-[40px] leading-none font-medium">
+          <h1 className="font-clash-grotesk max-w-[500px] text-center text-[32px] leading-none font-medium max-[450px]:text-[28px] sm:text-[36px] md:text-[40px]">
             We build solutions that solves your problems
           </h1>
           <p className="font-satoshi max-w-[600px] text-center">
@@ -119,14 +119,14 @@ export const Solutions: React.FC = () => {
           </p>
         </section>
 
-        <div className="bg-brand-secondary h-[400px] w-full rounded-[30px]" />
+        <div className="bg-brand-secondary h-[300px] w-full rounded-[26px] sm:h-[400px] sm:rounded-[30px]" />
 
-        <section className="flex justify-between">
-          <h1 className="font-clash-grotesk max-w-[500px] text-[40px] leading-none font-medium">
+        <section className="flex flex-col justify-between gap-5 lg:flex-row">
+          <h1 className="font-clash-grotesk max-w-[500px] text-[32px] leading-none font-medium max-[450px]:text-[28px] sm:text-[36px] md:text-[40px]">
             Crafting Growth Through SaaS with Bytearoo
           </h1>
           <section className="flex flex-col gap-2">
-            <p className="font- max-w-[575px] leading-snug">
+            <p className="font-satoshi max-w-[575px] leading-snug">
               Our approach to IT solutions is based on a deep understanding of client&apos;s businesses and their unique
               requirements. Whether it&apos;s developing a new software application, designing a website, or
               implementing a strategy, our team works closely with client&apos;s to deliver solutions that are tailored
