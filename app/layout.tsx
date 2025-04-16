@@ -3,6 +3,7 @@ import './globals.css';
 import { Providers } from '~/utils/providers';
 import { Footer, Header } from '~/components/layout';
 import { satoshi, clashGrotesk } from '~/fonts';
+// import { Cursor } from '~/components/common/Cursor/Cursor';
 
 export const metadata: Metadata = {
   title: 'Bytearoo',
@@ -18,6 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`antialiased ${satoshi.variable} ${clashGrotesk.variable}`}>
         <Providers>
+          {/* <Cursor /> */}
           <Header />
           {children}
           <Footer />

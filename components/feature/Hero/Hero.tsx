@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 // assets
-import { circleArrow, logo, star } from '~/public';
+import { circleArrow, imageFour, logo, star } from '~/public';
 
 export const Hero: React.FC = () => {
   return (
@@ -15,7 +15,9 @@ export const Hero: React.FC = () => {
           </h1>
         </section>
         <section className="w-full p-5 sm:w-fit sm:p-[30px] lg:p-[50px]">
-          <div className="bg-brand-secondary h-[150px] w-full rounded-[10px] sm:w-[260px]"></div>
+          <div className="bg-brand-secondary relative h-[150px] w-full overflow-hidden rounded-[10px] sm:w-[260px]">
+            <Image src={imageFour} alt="star" fill className="object-cover object-center" />
+          </div>
         </section>
       </section>
 

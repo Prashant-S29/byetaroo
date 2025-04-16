@@ -27,9 +27,9 @@ export const ExpertiseCard: React.FC<ExpertiseCardProps> = ({ index, title }) =>
       <section className="flex w-full max-w-[300px] justify-between">
         {/* <p className="w-[30px] text-center text-xs">{index + 1}</p> */}
         <div className="flex w-[30px] justify-center text-xs">
-          <p className={`w-[20px] text-center ${isHover ? 'opacity-100' : 'opacity-0'} duration-300`}>/</p>
+          <p className={`w-[20px] text-center ${isHover ? 'opacity-100' : 'opacity-0'} duration-150`}>/</p>
           <p className="w-[20px] text-center">{index + 1}</p>
-          <p className={`w-[20px] text-center ${isHover ? 'opacity-100' : 'opacity-0'} duration-300`}>/</p>
+          <p className={`w-[20px] text-center ${isHover ? 'opacity-100' : 'opacity-0'} duration-150`}>/</p>
         </div>
         <div className="flex w-[30px] justify-center text-xs">
           ( <p className="w-[20px] text-center">{isHover ? '+' : '-'}</p> )

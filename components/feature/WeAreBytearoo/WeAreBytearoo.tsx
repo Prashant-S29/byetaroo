@@ -4,6 +4,10 @@ import React, { useEffect, useState } from 'react';
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { data } from './data';
+import { imageOne, imageThree, imageTwo } from '~/public';
+import Image from 'next/image';
+
+const images = [imageOne, imageTwo, imageThree];
 
 export const WeAreBytearoo: React.FC = () => {
   const [activeCard, setActiveCard] = useState(0);
@@ -87,7 +91,7 @@ export const WeAreBytearoo: React.FC = () => {
           </div>
         </div>
 
-        <div className="bg-brand-secondary font-satoshi flex h-full w-full flex-col-reverse gap-0 rounded-[20px] p-[10px] md:h-[345px] md:flex-row md:gap-[50px] xl:w-[960px]">
+        <div className="bg-brand-secondary/70 font-satoshi flex h-full w-full flex-col-reverse gap-0 rounded-[20px] p-[10px] md:h-[345px] md:flex-row md:gap-[50px] xl:w-[960px]">
           <div className="relative flex h-[300px] w-full flex-col justify-normal py-[25px] max-[450px]:h-[340px] max-[450px]:py-0 md:h-full lg:justify-between">
             <AnimatePresence>
               <div className="max-[450px]:relative">
@@ -172,7 +176,65 @@ export const WeAreBytearoo: React.FC = () => {
           </div>
 
           <div className="relative flex h-[250px] w-full items-center justify-center rounded-[15px] bg-white md:h-full md:w-[600px] lg:min-w-1/2">
-            {activeCard}
+            <AnimatePresence>
+              <motion.div
+                key={0}
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                }}
+                exit={{
+                  opacity: 0,
+                }}
+                transition={{
+                  duration: 1,
+                  ease: 'easeInOut',
+                }}
+                className={`absolute h-full w-full ${activeCard === 0 ? '' : 'hidden'}`}
+              >
+                <Image src={images[0]} alt="image" fill className="rounded-[15px] object-cover" />
+              </motion.div>
+              <motion.div
+                key={1}
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                }}
+                exit={{
+                  opacity: 0,
+                }}
+                transition={{
+                  duration: 1,
+                  ease: 'easeInOut',
+                }}
+                className={`absolute h-full w-full ${activeCard === 1 ? '' : 'hidden'}`}
+              >
+                <Image src={images[1]} alt="image" fill className="rounded-[15px] object-cover" />
+              </motion.div>
+              <motion.div
+                key={2}
+                initial={{
+                  opacity: 0,
+                }}
+                animate={{
+                  opacity: 1,
+                }}
+                exit={{
+                  opacity: 0,
+                }}
+                transition={{
+                  duration: 1,
+                  ease: 'easeInOut',
+                }}
+                className={`absolute h-full w-full ${activeCard === 2 ? '' : 'hidden'}`}
+              >
+                <Image src={images[2]} alt="image" fill className="rounded-[15px] object-cover" />
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
       </div>

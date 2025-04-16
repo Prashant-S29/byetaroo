@@ -3,7 +3,7 @@ import { Expertise, Hero, Info, Solutions, Team, WeAreBest, WeAreBytearoo } from
 
 const Home: React.FC = () => {
   return (
-    <>
+    <div id="root">
       <Hero />
       <Info />
       <WeAreBest />
@@ -13,7 +13,7 @@ const Home: React.FC = () => {
       <Solutions />
 
       {/* <div className="h-screen w-full bg-black" /> */}
-    </>
+    </div>
   );
 };
 
